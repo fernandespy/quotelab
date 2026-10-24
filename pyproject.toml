@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quotelab"
+version = "0.1.0"
+description = "QuoteLab — Motor de Cotações Multisseguradora.  Plataforma independente que recebe uma solicitação de cotação, consulta provedores fictícios, compara os resultados e devolve ofertas ao consumidor."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Bruno Fernandes", email = "brunofernandes.job@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "fastapi==0.162.0",
+    "pytest==9.1.1",
+    "httpx==0.28.1",
+    "httpx2==2.16.0",
+    "ruff==0.17.2"
+]
+
+[project.optional-dependencies]
+dev = [
+
+]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
